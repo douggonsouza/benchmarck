@@ -2,29 +2,55 @@
 
 namespace douggonsouza\benchmarck;
 
-use douggonsouza\benchmarck\benchmarckInterface;
-use douggonsouza\propertys\propertysInterface;
+use douggonsouza\benchmarck\behaviorInterface;
+use douggonsouza\benchmarck\assets\assets;
+use douggonsouza\benchmarck\blocks\blocks;
+use douggonsouza\benchmarck\layouts\layouts;
 
-abstract class benchmarck implements benchmarckInterface
+final class benchmarck
 {
     protected static $behavior;
-    
-    public static function benchmarck(benchmarckInterface $behavior)
+
+    /**
+     * Implementa comportamento assets
+     *
+     * @param string|null $script
+     * 
+     * @return string
+     * 
+     */
+    public function assets(string $script = null, string $type = assets::ABSOLUTE_DIR)
     {
-        self::setBehavior($behavior);
+        self::setBehavior(new assets());
+        return self::getBehavior()->setType($type)->behavior($script);
     }
 
     /**
-     * Executa o comportamento
+     * Implementa comportamento blocks
      *
-     * @param propertysInterface|null $propertys
+     * @param string|null $script
      * 
-     * @return void
+     * @return string
      * 
      */
-    public function behavior(propertysInterface $propertys = null)
+    public function blocks(string $script = null)
     {
-        self::getBehavior()->behavior($propertys);
+        self::setBehavior(new blocks());
+        return self::getBehavior()->behavior($script);
+    }
+
+    /**
+     * Implementa comportamento layouts
+     *
+     * @param string|null $script
+     * 
+     * @return string
+     * 
+     */
+    public function layouts(string $script = null)
+    {
+        self::setBehavior(new layouts());
+        return self::getBehavior()->behavior($script);
     }
 
     /**
@@ -40,7 +66,7 @@ abstract class benchmarck implements benchmarckInterface
      *
      * @return  self
      */ 
-    protected function setBehavior(benchmarckInterface $behavior)
+    public function setBehavior(behaviorInterface $behavior)
     {
         if(isset($behavior) && !empty($behavior)){
             self::$behavior = $behavior;

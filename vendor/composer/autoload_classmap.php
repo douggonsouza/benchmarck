@@ -7,10 +7,14 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'douggonsouza\\benchmarck\\assets\\assets' => $baseDir . '/src/assets/assets.php',
+    'douggonsouza\\benchmarck\\behaviorInterface' => $baseDir . '/src/behaviorInterface.php',
     'douggonsouza\\benchmarck\\benchmarck' => $baseDir . '/src/benchmarck.php',
     'douggonsouza\\benchmarck\\benchmarckInterface' => $baseDir . '/src/benchmarckInterface.php',
     'douggonsouza\\benchmarck\\block' => $baseDir . '/src/block.php',
+    'douggonsouza\\benchmarck\\blocks\\blocks' => $baseDir . '/src/blocks/blocks.php',
     'douggonsouza\\benchmarck\\layout' => $baseDir . '/src/layout.php',
+    'douggonsouza\\benchmarck\\layouts\\layouts' => $baseDir . '/src/layouts/layouts.php',
     'douggonsouza\\benchmarck\\references' => $baseDir . '/src/references.php',
     'douggonsouza\\propertys\\propertys' => $vendorDir . '/douggonsouza/propertys/src/propertys.php',
     'douggonsouza\\propertys\\propertysInterface' => $vendorDir . '/douggonsouza/propertys/src/propertysInterface.php',
