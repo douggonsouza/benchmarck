@@ -6,10 +6,12 @@ use douggonsouza\benchmarck\behaviorInterface;
 use douggonsouza\benchmarck\assets\assets;
 use douggonsouza\benchmarck\blocks\blocks;
 use douggonsouza\benchmarck\layouts\layouts;
+use douggonsouza\benchmarck\identify;
 
 final class benchmarck
 {
     protected static $behavior;
+    protected static $identify;
 
     /**
      * Implementa comportamento assets
@@ -54,6 +56,25 @@ final class benchmarck
     }
 
     /**
+     * Implementa comportamento de template identificado
+     *
+     * @param string|null       $identify
+     * @param behaviorInterface $newIdentify
+     * 
+     * @return string
+     * 
+     */
+    public function identified(string $identify)
+    {
+        if(!isset($identify) && !empty($identify)){
+            throw new \Exception("O parâmetro Identify e o Config são obrigatórios.");
+        }
+
+        $this->setBehavior(self::getIdentify());        
+        return $this->getBehavior()->behavior($identify);
+    }
+
+    /**
      * Get the value of behavior
      */ 
     public static function getBehavior()
@@ -73,6 +94,28 @@ final class benchmarck
         }
 
         return $this;
+    }
+
+    /**
+     * Get the value of identify
+     */ 
+    public static function getIdentify()
+    {
+        return self::$identify;
+    }
+
+    /**
+     * Set the value of identify
+     *
+     * @return  self
+     */ 
+    public static function setIdentify(behaviorInterface $identify)
+    {
+        if(isset($identify) && !empty($identify)){
+            self::$identify = $identify;
+        }        
+
+        return;
     }
 }
 ?>

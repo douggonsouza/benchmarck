@@ -31,11 +31,9 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
         'douggonsouza\\benchmarck\\behaviorInterface' => __DIR__ . '/../..' . '/src/behaviorInterface.php',
         'douggonsouza\\benchmarck\\benchmarck' => __DIR__ . '/../..' . '/src/benchmarck.php',
         'douggonsouza\\benchmarck\\benchmarckInterface' => __DIR__ . '/../..' . '/src/benchmarckInterface.php',
-        'douggonsouza\\benchmarck\\block' => __DIR__ . '/../..' . '/src/block.php',
         'douggonsouza\\benchmarck\\blocks\\blocks' => __DIR__ . '/../..' . '/src/blocks/blocks.php',
-        'douggonsouza\\benchmarck\\layout' => __DIR__ . '/../..' . '/src/layout.php',
+        'douggonsouza\\benchmarck\\identify' => __DIR__ . '/../..' . '/src/identify.php',
         'douggonsouza\\benchmarck\\layouts\\layouts' => __DIR__ . '/../..' . '/src/layouts/layouts.php',
-        'douggonsouza\\benchmarck\\references' => __DIR__ . '/../..' . '/src/references.php',
         'douggonsouza\\propertys\\propertys' => __DIR__ . '/..' . '/douggonsouza/propertys/src/propertys.php',
         'douggonsouza\\propertys\\propertysInterface' => __DIR__ . '/..' . '/douggonsouza/propertys/src/propertysInterface.php',
     );
