@@ -105,7 +105,7 @@ class identify implements behaviorInterface
         }
 
         self::$config[$identify] = array(
-            'local' => $local,
+            'local' => __DIR__ . $local,
             'controller' => $controller
         );
 
