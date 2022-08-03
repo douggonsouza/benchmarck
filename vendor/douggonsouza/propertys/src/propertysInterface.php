@@ -55,6 +55,6 @@ interface propertysInterface
      * @return string
      * 
      */
-    public function toSerializabe()
+    public function toSerializabe();
 }
 ?>

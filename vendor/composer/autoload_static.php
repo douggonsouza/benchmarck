@@ -10,6 +10,7 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
         'd' => 
         array (
             'douggonsouza\\propertys\\' => 23,
+            'douggonsouza\\language\\' => 22,
             'douggonsouza\\benchmarck\\' => 24,
         ),
     );
@@ -18,6 +19,10 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
         'douggonsouza\\propertys\\' => 
         array (
             0 => __DIR__ . '/..' . '/douggonsouza/propertys/src',
+        ),
+        'douggonsouza\\language\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/douggonsouza/language/src',
         ),
         'douggonsouza\\benchmarck\\' => 
         array (
@@ -34,6 +39,8 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
         'douggonsouza\\benchmarck\\blocks\\blocks' => __DIR__ . '/../..' . '/src/blocks/blocks.php',
         'douggonsouza\\benchmarck\\identify' => __DIR__ . '/../..' . '/src/identify.php',
         'douggonsouza\\benchmarck\\layouts\\layouts' => __DIR__ . '/../..' . '/src/layouts/layouts.php',
+        'douggonsouza\\language\\language' => __DIR__ . '/..' . '/douggonsouza/language/src/language.php',
+        'douggonsouza\\language\\languageInterface' => __DIR__ . '/..' . '/douggonsouza/language/src/languageInterface.php',
         'douggonsouza\\propertys\\propertys' => __DIR__ . '/..' . '/douggonsouza/propertys/src/propertys.php',
         'douggonsouza\\propertys\\propertysInterface' => __DIR__ . '/..' . '/douggonsouza/propertys/src/propertysInterface.php',
     );

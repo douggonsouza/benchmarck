@@ -4,23 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "205775b59f67c71a88b78318e71264e8",
+    "content-hash": "56cd1cf243db7161dd56640d73d7075e",
     "packages": [
         {
-            "name": "douggonsouza/propertys",
-            "version": "dev-main",
+            "name": "douggonsouza/language",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/douggonsouza/propertys.git",
-                "reference": "cdaaeda9f37648927fbf83dc1cd47cc153970833"
+                "url": "https://github.com/douggonsouza/language.git",
+                "reference": "f56f654b4391ad252586df97bc19dcb5c9e273b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douggonsouza/propertys/zipball/cdaaeda9f37648927fbf83dc1cd47cc153970833",
-                "reference": "cdaaeda9f37648927fbf83dc1cd47cc153970833",
+                "url": "https://api.github.com/repos/douggonsouza/language/zipball/f56f654b4391ad252586df97bc19dcb5c9e273b0",
+                "reference": "f56f654b4391ad252586df97bc19dcb5c9e273b0",
                 "shasum": ""
             },
-            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "douggonsouza\\language\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Douglas Gonçalves de Souza",
+                    "email": "douggonsouza@gmail.com"
+                }
+            ],
+            "description": "Expõe o valor da etiqueta para uma linguagem",
+            "support": {
+                "issues": "https://github.com/douggonsouza/language/issues",
+                "source": "https://github.com/douggonsouza/language/tree/v1.0.1"
+            },
+            "time": "2022-08-03T11:31:31+00:00"
+        },
+        {
+            "name": "douggonsouza/propertys",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/douggonsouza/propertys.git",
+                "reference": "be8f49f5311e5818e9d534cc45ba0786f8df3319"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/douggonsouza/propertys/zipball/be8f49f5311e5818e9d534cc45ba0786f8df3319",
+                "reference": "be8f49f5311e5818e9d534cc45ba0786f8df3319",
+                "shasum": ""
+            },
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -40,20 +76,18 @@
             "description": "Armazenagem das propriedades",
             "support": {
                 "issues": "https://github.com/douggonsouza/propertys/issues",
-                "source": "https://github.com/douggonsouza/propertys/tree/v1.0.1"
+                "source": "https://github.com/douggonsouza/propertys/tree/v1.0.3"
             },
-            "time": "2022-03-29T16:04:38+00:00"
+            "time": "2022-04-17T02:10:09+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "douggonsouza/propertys": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

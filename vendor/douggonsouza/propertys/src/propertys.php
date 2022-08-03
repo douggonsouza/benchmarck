@@ -5,25 +5,24 @@ namespace douggonsouza\propertys;
 use stdClass;
 use douggonsouza\propertys\propertysInterface;
 
+/**
+ * propertys: Conteiner de propriedades
+ */
 class propertys extends stdClass implements propertysInterface
 {
     /**
-     * Evento construtor da classe
+     * __construct: Evento construtor da classe
      *
      * @param array $propertys
      * 
      */
     public function __construct(array $propertys)
     {
-        foreach($propertys as $name => $value){
-            if(isset($value) && !empty($value)){
-                $this->$name = $value;
-            }
-        }
+        $this->add($propertys);
     }
 
     /**
-     * Adiciona propriedades
+     * add: Adiciona propriedades
      *
      * @param array $propertys
      * 
@@ -42,7 +41,7 @@ class propertys extends stdClass implements propertysInterface
     }
 
     /**
-     * Deleta propriedade
+     * del: Deleta propriedade
      *
      * @param string $property
      * 
@@ -63,7 +62,7 @@ class propertys extends stdClass implements propertysInterface
      * @param mixed $value
      * 
      */
-    public function __set(string $name, mixed $value)
+    public function __set(string $name, $value)
     {
         if(isset($value) && !empty($value)){
             $this->$name = $value;
@@ -71,7 +70,7 @@ class propertys extends stdClass implements propertysInterface
     }
 
     /**
-     * Exporta classe como array
+     * toArray: Exporta classe como array
      *
      * @return array
      * 
@@ -82,7 +81,7 @@ class propertys extends stdClass implements propertysInterface
     }
 
     /**
-     * Exporta classe como serialize
+     * toSerializabe: Exporta classe como serialize
      *
      * @return string
      * 

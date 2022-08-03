@@ -3,7 +3,8 @@
     "description": "Páginas de referência",
     "type": "library",
     "require": {
-        "douggonsouza/propertys": "dev-main"
+        "douggonsouza/propertys": "^1",
+        "douggonsouza/language": "^1.0"
     },
     "license": "MIT",
     "autoload": {
