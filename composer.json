@@ -3,7 +3,7 @@
     "description": "Páginas de referência",
     "type": "library",
     "require": {
-        "douggonsouza/propertys": "^1",
+        "douggonsouza/propertys": "^1.0",
         "douggonsouza/language": "^1.0"
     },
     "license": "MIT",
