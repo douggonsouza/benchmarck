@@ -7,11 +7,13 @@ use douggonsouza\benchmarck\assets\assets;
 use douggonsouza\benchmarck\blocks\blocks;
 use douggonsouza\benchmarck\layouts\layouts;
 use douggonsouza\benchmarck\identify;
+use douggonsouza\language\languageInterface;
 
 final class benchmarck
 {
     protected static $behavior;
     protected static $identify;
+    protected $language;
 
     /**
      * Implementa comportamento assets
@@ -116,6 +118,28 @@ final class benchmarck
         }        
 
         return;
+    }
+
+    /**
+     * Get the value of language
+     */ 
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set the value of language
+     *
+     * @return  self
+     */ 
+    public function setLanguage(languageInterface $language)
+    {
+        if(isset($language) && !empty($language)){
+            $this->language = $language;
+        }
+
+        return $this;
     }
 }
 ?>
