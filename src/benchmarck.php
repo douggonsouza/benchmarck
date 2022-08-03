@@ -15,6 +15,11 @@ final class benchmarck
     protected static $identify;
     protected $language;
 
+    public function __construct(languageInterface $language)
+    {
+        $this->setLanguage($language);
+    }
+
     /**
      * Implementa comportamento assets
      *
