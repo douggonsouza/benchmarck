@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d86886d984e9f5afdbd97a1f5afb7dd9",
+    "content-hash": "c3a0560a370754d02058b3b6b95b5645",
     "packages": [
         {
             "name": "douggonsouza/language",
