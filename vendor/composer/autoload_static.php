@@ -38,7 +38,6 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
         'douggonsouza\\benchmarck\\benchmarckInterface' => __DIR__ . '/../..' . '/src/benchmarckInterface.php',
         'douggonsouza\\benchmarck\\blocks\\blocks' => __DIR__ . '/../..' . '/src/blocks/blocks.php',
         'douggonsouza\\benchmarck\\identify' => __DIR__ . '/../..' . '/src/identify.php',
-        'douggonsouza\\benchmarck\\layouts\\layouts' => __DIR__ . '/../..' . '/src/layouts/layouts.php',
         'douggonsouza\\language\\language' => __DIR__ . '/..' . '/douggonsouza/language/src/language.php',
         'douggonsouza\\language\\languageInterface' => __DIR__ . '/..' . '/douggonsouza/language/src/languageInterface.php',
         'douggonsouza\\propertys\\propertys' => __DIR__ . '/..' . '/douggonsouza/propertys/src/propertys.php',

@@ -8,6 +8,35 @@ class identify implements behaviorInterface
 {
     protected static $config = array();
 
+        
+    /**
+     * Evento construtor da classe
+     *
+     * @param  mixed $config
+     * @return void
+     */
+    public function __construct(string $config = null)
+    {
+        $this->config($config);
+    }
+    
+    /**
+     * Recebe config default
+     *
+     * @param  mixed $config
+     * @return void
+     */
+    public function config(string $config = null)
+    {
+        if(!file_exists($config)){
+            return;
+        }
+
+        $this->config = include($config);
+
+        return true;
+    }
+
     /**
      * Executa o comportamento
      *
@@ -33,14 +62,28 @@ class identify implements behaviorInterface
      * Adiciona controller ou local ao identificador do template
      * 
      * @param string $identify
-     * @param string $controller
      * @param string $local
+     * @param string $controller
      * 
      * @return bool
      */
-    public static function add(string $identify, string $controller = null, string $local = null)
+    public static function add(string $identify, string $local = null, string $controller = null)
     {
         return self::setConfig($identify, $controller, $local);
+    }
+
+    /** 
+     * Adiciona controller ou local ao identificador do template
+     * 
+     * @param string $identify
+     * @param string $local
+     * @param string $controller
+     * 
+     * @return bool
+     */
+    public static function addController(string $identify, string $controller = null)
+    {
+        return self::setConfig($identify, $controller);
     }
 
     /** 
