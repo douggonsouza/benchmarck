@@ -4,57 +4,55 @@ namespace douggonsouza\benchmarck;
 
 //Adiciona configurações identificadas benchmarck
 
-return array(
-    'defaultLayout' => array(
-        'local' => '/layouts/default.phtml',
-        'controller' => null),
-    'dashboard'     => array(
-        'local' => '/layouts/dashboard.phtml',
-        'controller' => null),
-    'dashboard1'    => array(
-        'local' => '/layouts/dashboard1.phtml',
-        'controller' => null),
-    'dashboard2' => array(
-        'local' => '/layouts/dashboard2.phtml',
-        'controller' => null),
-    'dashboard3' => array(
-        'local' => '/layouts/dashboard3.phtml',
-        'controller' => null),
-    'dashboardCssBlock' => array(
-        'local' => '/blocks/dashboardCssBlock.phtml',
-        'controller' => null),
-    'dashboardHeaderMobileBlock' => array(
-        'local' => '/blocks/dashboardCssBlock.phtml',
-        'controller' => null),
-    'dashboardJsBlock' => array(
-        'local' => '/blocks/dashboardCssBlock.phtml',
-        'controller' => null),
-    'dashboardMenuSidebarBlock' => array(
-        'local' => '/blocks/dashboardCssBlock.phtml',
-        'controller' => null),
-    'dashboardPageContainerBlock' => array(
-        'local' => '/blocks/dashboardPageContainerBlock.phtml',
-        'controller' => null),
-    'dashboardPageContainerdMainContentBlock' => array(
-        'local' => '/blocks/dashboardPageContainerdMainContentBlock.phtml',
-        'controller' => null),
-    'dashboardPageContainerHeaderDesktopBlock' => array(
-        'local' => '/blocks/dashboardPageContainerHeaderDesktopBlock.phtml',
-        'controller' => null),
-    'dashboard1CssBlock' => array(
-        'local' => '/blocks/ashboard1CssBlock.phtml',
-        'controller' => null),
-    'dashboard1PageContainerBlock' => array(
-        'local' => '/blocks/ddashboard1PageContainerBlock.phtml',
-        'controller' => null),
-    'dashboard1JsBlock' => array(
-        'local' => '/blocks/dashboard1JsBlock.phtml',
-        'controller' => null),
-    'dashboard1MenuSidebarBlock' => array(
-        'local' => '/blocks/dashboard1MenuSidebarBlock.phtml',
-        'controller' => null),
-    'login' => array(
-        'local' => '/blocks/login/loginFrame.phtml',
-        'controller' => null)
+    return array(
+        'defaultLayout' => array('local' => __DIR__ . '/layouts/default.phtml', 'controller' => null),
+        'dashboard' => array('local' => __DIR__ . '/layouts/dashboard.phtml', 'controller' => null),
+        'dashboardCssBlock' => array('local' => __DIR__ . '/blocks/dashboardCssBlock.phtml', 'controller' => null),
+        'dashboardHeaderMobileBlock' => array('local' => __DIR__ . '/blocks/dashboardHeaderMobileBlock.phtml', 'controller' => null),
+        'dashboardMenuSidebarBlock' => array('local' => __DIR__ . '/blocks/dashboardMenuSidebarBlock.phtml', 'controller' => null),
+        'dashboardPageContainerBlock' => array('local' => __DIR__ . '/blocks/dashboardPageContainerBlock.phtml', 'controller' => null),
+        'dashboardPageContainerHeaderDesktopBlock' => array('local' => __DIR__ . '/blocks/dashboardPageContainerHeaderDesktopBlock.phtml', 'controller' => null),
+        'dashboardPageContainerMainContentBlock' => array('local' => __DIR__ . '/blocks/dashboardPageContainerMainContentBlock.phtml', 'controller' => null),
+        'dashboardJsBlock' => array('local' => __DIR__ . '/blocks/dashboardJsBlock.phtml', 'controller' => null),
+        'dashboard1' => array('local' => __DIR__ . '/layouts/dashboard1.phtml', 'controller' => null),
+        'dashboard1CssBlock' => array('local' => __DIR__ . '/blocks/dashboard1CssBlock.phtml', 'controller' => null),
+        'dashboard1MenuSidebarBlock' => array('local' => __DIR__ . '/blocks/dashboard1MenuSidebarBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerHeaderWrapBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerHeaderWrapBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerMenuSidebarBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerMenuSidebarBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerHeaderDesktopBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerHeaderDesktopBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerBreakcrumbBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerBreakcrumbBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerStatisticBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerStatisticBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerRecentReport2Block' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerRecentReport2Block.phtml', 'controller' => null),
+        'dashboard1PageContainerTaskProgressBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerTaskProgressBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerUserDataBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerUserDataBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerMapDataBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerMapDataBlock.phtml', 'controller' => null),
+        'dashboard1PageContainerCopyrightBlock' => array('local' => __DIR__ . '/blocks/dashboard1PageContainerCopyrightBlock.phtml', 'controller' => null),
+        'dashboard1JsBlock' => array('local' => __DIR__ . '/blocks/dashboard1JsBlock.phtml', 'controller' => null),
+        'dashboard2' => array('local' => __DIR__ . '/layouts/dashboard2.phtml', 'controller' => null),
+        'dashboard2CssBlock' => array('local' => __DIR__ . '/blocks/dashboard2CssBlock.phtml', 'controller' => null),
+        'dashboard2HeaderDesktopBlock' => array('local' => __DIR__ . '/blocks/dashboard2HeaderDesktopBlock.phtml', 'controller' => null),
+        'dashboard2HeaderMobileBlock' => array('local' => __DIR__ . '/blocks/dashboard2HeaderMobileBlock.phtml', 'controller' => null),
+        'dashboard2HeaderMobileToolBlock' => array('local' => __DIR__ . '/blocks/dashboard2HeaderMobileToolBlock.phtml', 'controller' => null),
+        'dashboard2PageContentBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentBlock.phtml', 'controller' => null),
+        'dashboard2PageContentBreadcrumbBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentBreadcrumbBlock.phtml', 'controller' => null),
+        'dashboard2PageContentWelcomeBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentWelcomeBlock.phtml', 'controller' => null),
+        'dashboard2PageContentStatisticBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentStatisticBlock.phtml', 'controller' => null),
+        'dashboard2PageContentStatisticChartBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentStatisticChartBlock.phtml', 'controller' => null),
+        'dashboard2PageContentDataTableBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentDataTableBlock.phtml', 'controller' => null),
+        'dashboard2PageContentCopyrightBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentCopyrightBlock.phtml', 'controller' => null),
+        'dashboard2JsBlock' => array('local' => __DIR__ . '/blocks/dashboard2JsBlock.phtml', 'controller' => null),
+        'login' => array('local' => __DIR__ . '/layouts/login.phtml', 'controller' => null),
+        'loginCssBlock' => array('local' => __DIR__ . '/blocks/loginCssBlock.phtml', 'controller' => null),
+        'loginJsBlock' => array('local' => __DIR__ . '/blocks/loginJsBlock.phtml', 'controller' => null),
+        'loginPageContentBlock' => array('local' => __DIR__ . '/blocks/loginPageContentBlock.phtml', 'controller' => null),
+        'register' => array('local' => __DIR__ . '/layouts/register.phtml', 'controller' => null),
+        'registerCssBlock' => array('local' => __DIR__ . '/blocks/registerCssBlock.phtml', 'controller' => null),
+        'registerJsBlock' => array('local' => __DIR__ . '/blocks/registerJsBlock.phtml', 'controller' => null),
+        'registerPageContentBlock' => array('local' => __DIR__ . '/blocks/registerPageContentBlock.phtml', 'controller' => null),
+        'forgetpass' => array('local' => __DIR__ . '/layouts/forget-pass.phtml', 'controller' => null),
+        'forgetpassCssBlock' => array('local' => __DIR__ . '/blocks/forgetpassCssBlock.phtml', 'controller' => null),
+        'forgetpassJsBlock' => array('local' => __DIR__ . '/blocks/forgetpassJsBlock.phtml', 'controller' => null),
+        'forgetpassPageContentBlock' => array('local' => __DIR__ . '/blocks/forgetpassPageContentBlock.phtml', 'controller' => null),
     );
 ?>

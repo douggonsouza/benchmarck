@@ -6,7 +6,7 @@ use douggonsouza\benchmarck\behaviorInterface;
 
 class identify implements behaviorInterface
 {
-    protected static $config = array();
+    protected $config = array();
 
         
     /**
@@ -29,7 +29,7 @@ class identify implements behaviorInterface
     public function config(string $config = null)
     {
         if(!file_exists($config)){
-            return;
+            return false;
         }
 
         $this->config = include($config);
@@ -121,9 +121,9 @@ class identify implements behaviorInterface
     /**
      * Get the value of config
      */ 
-    public static function getConfig()
+    public function getConfig()
     {
-        return self::$config;
+        return $this->config;
     }
 
     /**
@@ -131,24 +131,24 @@ class identify implements behaviorInterface
      *
      * @return  bool
      */ 
-    public static function setConfig($identify, string $controller = null, string $local = null)
+    public function setConfig($identify, string $controller = null, string $local = null)
     {
         if(!isset($identify) || empty($identify)){
             return false;
         }
 
-        $config = self::getConfig();
+        $config = $this->getConfig();
 
         if(isset($config[$identify]) && !empty($config[$identify])){
             $config = array(
-                'local' => __DIR__ . $local,
+                'local' => $local,
                 'controller' => $controller
             );
             return true;
         }
 
-        self::$config[$identify] = array(
-            'local' => __DIR__ . $local,
+        $this->config[$identify] = array(
+            'local' => $local,
             'controller' => $controller
         );
 
