@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <?php 
     use douggonsouza\routes\router;
+    use douggonsouza\alerts\alerts;
     use douggonsouza\benchmarck\assets\assets;
 ?>
 <head>
@@ -27,7 +28,38 @@
 </head>
 
 <body class="animsition">
+
+    <!-- BLOCO -->
+    <!-- loginJsBlock -->
+
+    <?php
+            router::identify('loginJsBlock', $params);
+        ?>
+
+    <!-- BLOCO -->
+
     <div class="page-wrapper">
+
+        <!-- BLOCO -->
+        <!-- loginAlertsBlock -->
+
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <?php
+                                if(alerts::exist()){
+                                    alerts::get();
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOCO -->
 
         <!-- BLOCO -->
         <!-- loginPageContent -->
@@ -39,16 +71,6 @@
         <!-- BLOCO -->
 
     </div>
-
-    <!-- BLOCO -->
-    <!-- loginJsBlock -->
-
-        <?php
-            router::identify('loginJsBlock', $params);
-        ?>
-
-    <!-- BLOCO -->
-
 </body>
 
 </html>

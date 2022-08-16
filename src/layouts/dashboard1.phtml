@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <?php
     use douggonsouza\routes\router;
+    use douggonsouza\alerts\alerts;
     use douggonsouza\benchmarck\assets\assets;
 ?>
 <head>
@@ -13,7 +14,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard 2</title>
+    <title>Dashboard 1</title>
 
     <!-- BLOCO -->
     <!-- dashboard1CssBlock -->
@@ -28,6 +29,16 @@
 </head>
 
 <body class="animsition">
+
+    <!-- BLOCO -->
+    <!-- dashboard1PageContainer -->
+
+    <?php
+        router::identify('dashboard1JsBlock', $params);
+    ?>
+
+    <!-- BLOCO -->
+    
     <div class="page-wrapper">
 
         <!-- BLOCO -->
@@ -57,16 +68,6 @@
         <!-- BLOCO -->
 
     </div>
-
-    <!-- BLOCO -->
-    <!-- dashboard1PageContainer -->
-
-    <?php
-        router::identify('dashboard1JsBlock', $params);
-    ?>
-
-    <!-- BLOCO -->
-
 </body>
 
 </html>

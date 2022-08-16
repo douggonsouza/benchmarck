@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <?php
     use douggonsouza\routes\router;
+    use douggonsouza\alerts\alerts;
     use douggonsouza\benchmarck\assets\assets;
 ?>
 <head>
@@ -26,6 +27,15 @@
 </head>
 
 <body class="animsition">
+
+    <!-- JS BLOCO -->
+
+    <?php
+        router::identify('dashboardJsBlock', $params);
+    ?>
+
+    <!-- END JS BLOCO -->
+    
     <div class="page-wrapper">
 
         <!-- HEADER MOBILE-->
@@ -46,6 +56,8 @@
 
         <div class="page-container">
 
+            <!-- BLOCO -->
+
             <!-- PAGE CONTAINER-->
 
             <?php
@@ -56,15 +68,6 @@
         </div>
 
     </div>
-
-    <!-- JS BLOCO -->
-
-    <?php
-        router::identify('dashboardJsBlock', $params);
-    ?>
-
-    <!-- END JS BLOCO -->
-
 </body>
 
 </html>

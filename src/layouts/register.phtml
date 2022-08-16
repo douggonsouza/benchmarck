@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <?php 
     use douggonsouza\routes\router;
+    use douggonsouza\alerts\alerts;
     use douggonsouza\benchmarck\assets\assets;
 ?>
 <head>
@@ -27,7 +28,45 @@
 </head>
 
 <body class="animsition">
+
+    <!-- BLOCO -->
+    <!-- registerJsBlock -->
+
+    <?php
+            router::identify('registerJsBlock', $params);
+        ?>
+
+    <!-- BLOCO -->
+    
     <div class="page-wrapper">
+
+        <!-- BLOCO -->
+        <!-- registerAlertsBlock -->
+
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <div class="sufee-alert alert with-close alert-primary alert-dismissible fade show">
+                                <span class="badge badge-pill badge-primary">Success</span>
+                                You successfully read this important alert.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <?php
+                                if(alerts::exist()){
+                                    alerts::get();
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BLOCO -->
 
         <!-- BLOCO -->
         <!-- registerPageContentBlock -->
@@ -39,15 +78,6 @@
         <!-- BLOCO -->
 
     </div>
-
-    <!-- BLOCO -->
-    <!-- registerJsBlock -->
-
-        <?php
-            router::identify('registerJsBlock', $params);
-        ?>
-
-    <!-- BLOCO -->
 
 </body>
 

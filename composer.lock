@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "douggonsouza/language",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/douggonsouza/language.git",
-                "reference": "fe361ddc095ece1ad7824db9c9a7671522b4cff0"
+                "reference": "b63647bc60d5a9cf13348bfcd17839b938b08120"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douggonsouza/language/zipball/fe361ddc095ece1ad7824db9c9a7671522b4cff0",
-                "reference": "fe361ddc095ece1ad7824db9c9a7671522b4cff0",
+                "url": "https://api.github.com/repos/douggonsouza/language/zipball/b63647bc60d5a9cf13348bfcd17839b938b08120",
+                "reference": "b63647bc60d5a9cf13348bfcd17839b938b08120",
                 "shasum": ""
             },
             "type": "library",
@@ -39,9 +39,9 @@
             "description": "Expõe o valor da etiqueta para uma linguagem",
             "support": {
                 "issues": "https://github.com/douggonsouza/language/issues",
-                "source": "https://github.com/douggonsouza/language/tree/v1.0.3"
+                "source": "https://github.com/douggonsouza/language/tree/v1.0.4"
             },
-            "time": "2022-08-03T16:35:38+00:00"
+            "time": "2022-08-10T12:30:58+00:00"
         },
         {
             "name": "douggonsouza/propertys",
