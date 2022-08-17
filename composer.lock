@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e217717e76503be7d937bbacbb07fb7",
+    "content-hash": "9985f836a335bd7370130707de3ceb0a",
     "packages": [
         {
             "name": "douggonsouza/alerts",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/douggonsouza/alerts.git",
-                "reference": "c6fa0f9961c4d2906aba7253995ae41827179dc9"
+                "reference": "7702732b2dd53e757c4167711648f38b87d558ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douggonsouza/alerts/zipball/c6fa0f9961c4d2906aba7253995ae41827179dc9",
-                "reference": "c6fa0f9961c4d2906aba7253995ae41827179dc9",
+                "url": "https://api.github.com/repos/douggonsouza/alerts/zipball/7702732b2dd53e757c4167711648f38b87d558ca",
+                "reference": "7702732b2dd53e757c4167711648f38b87d558ca",
                 "shasum": ""
             },
             "type": "library",
@@ -39,9 +39,9 @@
             "description": "Módulo de alertas do framework Heartwood",
             "support": {
                 "issues": "https://github.com/douggonsouza/alerts/issues",
-                "source": "https://github.com/douggonsouza/alerts/tree/v1.0.5"
+                "source": "https://github.com/douggonsouza/alerts/tree/v1.0.6"
             },
-            "time": "2022-08-16T10:25:26+00:00"
+            "time": "2022-08-17T11:46:09+00:00"
         },
         {
             "name": "douggonsouza/language",

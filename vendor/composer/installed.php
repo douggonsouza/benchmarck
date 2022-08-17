@@ -3,7 +3,7 @@
         'name' => 'douggonsouza/benchmarck',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '82976c4909a74791b40af96a31ec2663e28a428d',
+        'reference' => '2476c194177f2659eecbe669e1247628f3ba2f70',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'douggonsouza/alerts' => array(
-            'pretty_version' => 'v1.0.5',
-            'version' => '1.0.5.0',
-            'reference' => 'c6fa0f9961c4d2906aba7253995ae41827179dc9',
+            'pretty_version' => 'v1.0.6',
+            'version' => '1.0.6.0',
+            'reference' => '7702732b2dd53e757c4167711648f38b87d558ca',
             'type' => 'library',
             'install_path' => __DIR__ . '/../douggonsouza/alerts',
             'aliases' => array(),
@@ -22,7 +22,7 @@
         'douggonsouza/benchmarck' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '82976c4909a74791b40af96a31ec2663e28a428d',
+            'reference' => '2476c194177f2659eecbe669e1247628f3ba2f70',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

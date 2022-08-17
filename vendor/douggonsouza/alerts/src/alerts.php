@@ -2,7 +2,9 @@
 
 namespace douggonsouza\alerts;
 
-abstract class alerts
+use douggonsouza\alerts\alertsInterface;
+
+class alerts implements alertsInterface
 {
     // BADGE
     const BADGE_PRIMARY    = 'Primário';
