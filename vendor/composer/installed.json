@@ -1,6 +1,46 @@
 {
     "packages": [
         {
+            "name": "douggonsouza/alerts",
+            "version": "v1.0.5",
+            "version_normalized": "1.0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/douggonsouza/alerts.git",
+                "reference": "c6fa0f9961c4d2906aba7253995ae41827179dc9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/douggonsouza/alerts/zipball/c6fa0f9961c4d2906aba7253995ae41827179dc9",
+                "reference": "c6fa0f9961c4d2906aba7253995ae41827179dc9",
+                "shasum": ""
+            },
+            "time": "2022-08-16T10:25:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "douggonsouza\\alerts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Douglas Gonçalves de Souza",
+                    "email": "douggonsouza@gmail.com"
+                }
+            ],
+            "description": "Módulo de alertas do framework Heartwood",
+            "support": {
+                "issues": "https://github.com/douggonsouza/alerts/issues",
+                "source": "https://github.com/douggonsouza/alerts/tree/v1.0.5"
+            },
+            "install-path": "../douggonsouza/alerts"
+        },
+        {
             "name": "douggonsouza/language",
             "version": "v1.0.4",
             "version_normalized": "1.0.4.0",

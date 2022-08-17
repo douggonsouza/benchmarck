@@ -9,4 +9,5 @@ return array(
     'douggonsouza\\propertys\\' => array($vendorDir . '/douggonsouza/propertys/src'),
     'douggonsouza\\language\\' => array($vendorDir . '/douggonsouza/language/src'),
     'douggonsouza\\benchmarck\\' => array($baseDir . '/src'),
+    'douggonsouza\\alerts\\' => array($vendorDir . '/douggonsouza/alerts/src'),
 );

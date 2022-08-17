@@ -6,18 +6,21 @@ use douggonsouza\benchmarck\behaviorInterface;
 use douggonsouza\benchmarck\assets\assets;
 use douggonsouza\benchmarck\blocks\blocks;
 use douggonsouza\benchmarck\layouts\layouts;
-use douggonsouza\benchmarck\identify;
 use douggonsouza\language\languageInterface;
+use douggonsouza\alerts\alerts;
+use douggonsouza\alerts\alertsInterface;
 
 final class benchmarck
 {
     protected static $behavior;
     protected static $identify;
     protected $language;
+    protected $alerts;
 
     public function __construct(languageInterface $language)
     {
         $this->setLanguage($language);
+        $this->setAlerts(new alerts());
     }
 
     /**
@@ -142,6 +145,28 @@ final class benchmarck
     {
         if(isset($language) && !empty($language)){
             $this->language = $language;
+        }
+
+        return $this;
+    }
+
+    /**
+     * Get the value of alerts
+     */ 
+    public function getAlerts()
+    {
+        return $this->alerts;
+    }
+
+    /**
+     * Set the value of alerts
+     *
+     * @return  self
+     */ 
+    protected function setAlerts(alertsInterface $alerts)
+    {
+        if(isset($alerts) && !empty($alerts)){
+            $this->alerts = $alerts;
         }
 
         return $this;

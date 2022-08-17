@@ -12,6 +12,7 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
             'douggonsouza\\propertys\\' => 23,
             'douggonsouza\\language\\' => 22,
             'douggonsouza\\benchmarck\\' => 24,
+            'douggonsouza\\alerts\\' => 20,
         ),
     );
 
@@ -28,10 +29,15 @@ class ComposerStaticInitd72b845a614c12482431023a18d4e6fe
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
+        'douggonsouza\\alerts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/douggonsouza/alerts/src',
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'douggonsouza\\alerts\\alerts' => __DIR__ . '/..' . '/douggonsouza/alerts/src/alerts.php',
         'douggonsouza\\benchmarck\\assets\\assets' => __DIR__ . '/../..' . '/src/assets/assets.php',
         'douggonsouza\\benchmarck\\behaviorInterface' => __DIR__ . '/../..' . '/src/behaviorInterface.php',
         'douggonsouza\\benchmarck\\benchmarck' => __DIR__ . '/../..' . '/src/benchmarck.php',
