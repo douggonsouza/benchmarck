@@ -7,11 +7,13 @@ use douggonsouza\benchmarck\assets\assets;
 use douggonsouza\benchmarck\blocks\blocks;
 use douggonsouza\benchmarck\layouts\layouts;
 use douggonsouza\language\languageInterface;
-use douggonsouza\alerts\alerts;
-use douggonsouza\alerts\alertsInterface;
+use douggonsouza\benchmarck\alerts;
+use douggonsouza\benchmarck\alertsInterface;
 
 final class benchmarck
 {
+    const NAME = 'DouggSDashboard';
+
     protected static $behavior;
     protected static $identify;
     protected $language;
@@ -20,7 +22,7 @@ final class benchmarck
     public function __construct(languageInterface $language)
     {
         $this->setLanguage($language);
-        $this->setAlerts(new alerts());
+        $this->setAlerts(new alerts(self::NAME .'_alerts'));
     }
 
     /**

@@ -1,20 +1,20 @@
 <?php
 
-namespace douggonsouza\alerts;
+namespace douggonsouza\benchmarck;
 
-use douggonsouza\alerts\alertsInterface;
+use douggonsouza\benchmarck\alertsInterface;
 
 class alerts implements alertsInterface
 {
     // BADGE
-    const BADGE_PRIMARY    = 'Primário';
-    const BADGE_SECONDARY  = 'Secundário';
-    const BADGE_SUCCESS    = 'Sucesso';
-    const BADGE_DANGER     = 'Erro';
-    const BADGE_WARNING    = 'Atento';
-    const BADGE_INFO       = 'Informação';
-    const BADGE_LIGHT      = 'Inativo';
-    const BADGE_DARK       = 'Ativo';
+    const BADGE_PRIMARY    = 'Primary';
+    const BADGE_SECONDARY  = 'Secondary';
+    const BADGE_SUCCESS    = 'Success';
+    const BADGE_DANGER     = 'Danger';
+    const BADGE_WARNING    = 'Warning';
+    const BADGE_INFO       = 'Info';
+    const BADGE_LIGHT      = 'Light';
+    const BADGE_DARK       = 'Dark';
 
     // LABEL BADGE
     const LABEL_BADGE = array(
@@ -29,6 +29,18 @@ class alerts implements alertsInterface
     );
 
     static public $clear = true;
+    static public $name;
+    
+    /**
+     * __construct - Evanto construtor da classe
+     *
+     * @param  string $name
+     * @return void
+     */
+    public function __construct(string $name)
+    {
+        $this->setName($name);
+    }
 
     /**
      * Busca pela mensagem de alerta na sessão
@@ -38,11 +50,11 @@ class alerts implements alertsInterface
      */
     static final function session()
     {
-        if(!isset($_SESSION['msgAlert']) || empty($_SESSION['msgAlert'])){
-            $_SESSION['msgAlert'] = array();
+        if(!isset($_SESSION[self::getName()]) || empty($_SESSION[self::getName()])){
+            $_SESSION[self::getName()] = array();
         }
 
-        return $_SESSION['msgAlert'];
+        return $_SESSION[self::getName()];
     }
 
     /**
@@ -58,7 +70,7 @@ class alerts implements alertsInterface
             return false;
         }
 
-        $_SESSION['msgAlert'][$badge][] = $this->template($alert, $badge);
+        $_SESSION[self::getName()][$badge][] = $this->template($alert, $badge);
 
         return true;
     }
@@ -88,8 +100,8 @@ class alerts implements alertsInterface
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>',
-        $badge,
         self::LABEL_BADGE[$badge],
+        $badge,
         $message
         );
     }
@@ -143,7 +155,7 @@ class alerts implements alertsInterface
     {
         self::setClear($clear);
         if(self::getClear()){
-            $_SESSION['msgAlert'] = array();
+            $_SESSION[self::getName()] = array();
         }
     }
 
@@ -152,7 +164,7 @@ class alerts implements alertsInterface
      */ 
     static final public function exist()
     {
-        if(isset($_SESSION['msgAlert']) && !empty($_SESSION['msgAlert'])){
+        if(isset($_SESSION[self::getName()]) && !empty($_SESSION[self::getName()])){
              return true;
         }
 
@@ -185,6 +197,43 @@ class alerts implements alertsInterface
     public function __destruct()
     {
         self::clear();
+    }
+
+    /**
+     * Get the value of name
+     */ 
+    static public function getName()
+    {
+        return self::$name;
+    }
+
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    static private function setName($name)
+    {
+        if(isset($name) && !empty($name)){
+            self::$name = preg_replace(array(
+                    "/(á|à|ã|â|ä)/",
+                    "/(Á|À|Ã|Â|Ä)/",
+                    "/(é|è|ê|ë)/",
+                    "/(É|È|Ê|Ë)/",
+                    "/(í|ì|î|ï)/",
+                    "/(Í|Ì|Î|Ï)/",
+                    "/(ó|ò|õ|ô|ö)/",
+                    "/(Ó|Ò|Õ|Ô|Ö)/",
+                    "/(ú|ù|û|ü)/",
+                    "/(Ú|Ù|Û|Ü)/",
+                    "/(ñ)/",
+                    "/(Ñ)/",
+                    "/(ç)/",
+                    "/(Ç)/"),
+                explode(" ","a A e E i I o O u U n N c C"),
+                $name
+            );
+        }
     }
 }
 
