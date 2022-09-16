@@ -2,15 +2,13 @@
 <html lang="pt-br">
 <?php
     use douggonsouza\routes\router;
-    use douggonsouza\alerts\alerts;
-    use douggonsouza\benchmarck\assets\assets;
 ?>
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
-    <meta name="author" content="Hau Nguyen">
+    <meta name="author" content="<?= router::label('author'); ?>">
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
@@ -59,9 +57,10 @@
             <!-- BLOCO -->
 
             <!-- PAGE CONTAINER-->
+            <!-- dashboardPageContainerBlock -->
 
             <?php
-                router::page($params);
+                router::identify('dashboardPageContainerBlock', $params);
             ?>
 
             <!-- END PAGE CONTAINER-->

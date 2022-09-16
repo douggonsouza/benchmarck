@@ -1,6 +1,16 @@
 <?php 
     use douggonsouza\routes\router;
     use douggonsouza\benchmarck\assets\assets;
+    use douggonsouza\logged\models\user;
+    use douggonsouza\logged\logged;
+
+    $user = new user();
+    $user->search(array('user_id' => logged::getId()));
+    $perfil = $user->perfil();
+    $avatar = "/images/icon/avatar-01.jpg";
+    $email = $user->getField('email');
+    $name = $user->getField('name');
+    $lastName = $user->lastName();
 ?>
             <header class="header-desktop3 d-none d-lg-block">
                 <div class="section__content section__content--p35">
@@ -100,8 +110,10 @@
                                 </li>
                             </ul>
                         </div>
+                        
                         <div class="header__tool">
-                            <div class="header-button-item has-noti js-item-menu">
+
+                            <!-- <div class="header-button-item has-noti js-item-menu">
                                 <i class="zmdi zmdi-notifications"></i>
                                 <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
                                     <div class="notifi__title">
@@ -138,8 +150,24 @@
                                         <a href="#">All notifications</a>
                                     </div>
                                 </div>
+                            </div> -->
+
+                            <div class="header-button-item has-noti js-item-menu">
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-settings"></i></a>
+                                        <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="header-button-item js-item-menu">
+
+                            <!-- <div class="header-button-item js-item-menu">
                                 <i class="zmdi zmdi-settings"></i>
                                 <div class="setting-dropdown js-dropdown">
                                     <div class="account-dropdown__body">
@@ -175,27 +203,28 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+
                             <div class="account-wrap">
                                 <div class="account-item account-item--style2 clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="<?= router::assets("/images/icon/avatar-01.jpg", assets::ABSOLUTE_URL) ?>" alt="John Doe" />
+                                        <img src="<?= router::assets($avatar, assets::ABSOLUTE_URL) ?>" alt="<?= $lastName; ?>" />
                                     </div>
                                     <div class="content">
-                                        <a class="js-acc-btn" href="#">john doe</a>
+                                        <a class="js-acc-btn" href="#"><?= $lastName; ?></a>
                                     </div>
                                     <div class="account-dropdown js-dropdown">
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="<?= router::assets("/images/icon/avatar-01.jpg", assets::ABSOLUTE_URL) ?>" alt="John Doe" />
+                                                    <img src="<?= router::assets("/images/icon/avatar-01.jpg", assets::ABSOLUTE_URL) ?>" alt="<?= $name; ?>" />
                                                 </a>
                                             </div>
                                             <div class="content">
                                                 <h5 class="name">
-                                                    <a href="#">john doe</a>
+                                                    <a href="#"><?= $lastName; ?></a>
                                                 </h5>
-                                                <span class="email">johndoe@example.com</span>
+                                                <span class="email"><?= $email; ?></span>
                                             </div>
                                         </div>
                                         <div class="account-dropdown__body">

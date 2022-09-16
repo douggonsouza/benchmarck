@@ -70,7 +70,7 @@ class alerts implements alertsInterface
             return false;
         }
 
-        $_SESSION[self::getName()][$badge][] = $this->template($alert, $badge);
+        $_SESSION[self::getName()][$badge][] = self::template($alert, $badge);
 
         return true;
     }
@@ -79,7 +79,6 @@ class alerts implements alertsInterface
      * Expõe template para do alerta conforme o layout
      * 
      * <div class="sufee-alert alert with-close alert-primary alert-dismissible fade show">
-     *      <span class="badge badge-pill badge-primary">Success</span>
      * 		You successfully read this important alert.
      * 		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
      * 		<span aria-hidden="true">&times;</span></button>
@@ -94,14 +93,12 @@ class alerts implements alertsInterface
         }
 
         return sprintf('<div class="sufee-alert alert with-close %1$s alert-dismissible fade show">
-            <span class="badge badge-pill badge-primary">%2$s</span>
-             %3$s
+             %2$s
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>',
         self::LABEL_BADGE[$badge],
-        $badge,
         $message
         );
     }

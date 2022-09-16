@@ -14,6 +14,16 @@ final class benchmarck
 {
     const NAME = 'DouggSDashboard';
 
+    // BADGE
+    const BADGE_PRIMARY    = 'Primary';
+    const BADGE_SECONDARY  = 'Secondary';
+    const BADGE_SUCCESS    = 'Success';
+    const BADGE_DANGER     = 'Danger';
+    const BADGE_WARNING    = 'Warning';
+    const BADGE_INFO       = 'Info';
+    const BADGE_LIGHT      = 'Light';
+    const BADGE_DARK       = 'Dark';
+
     protected static $behavior;
     protected static $identify;
     protected $language;
