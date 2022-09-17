@@ -10,7 +10,7 @@ interface propertysInterface
      * @param array $propertys
      * 
      */
-    public function __construct(array $propertys);
+    public function __construct(array $propertys = null);
 
     /**
      * Sobrecarga do método mágico __set

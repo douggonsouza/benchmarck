@@ -16,9 +16,11 @@ class propertys extends stdClass implements propertysInterface
      * @param array $propertys
      * 
      */
-    public function __construct(array $propertys)
+    public function __construct(array $propertys = null)
     {
-        $this->add($propertys);
+        if(isset($propertys)){
+            $this->add($propertys);
+        }
     }
 
     /**
