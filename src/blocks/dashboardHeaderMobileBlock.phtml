@@ -1,6 +1,15 @@
 <?php
     use douggonsouza\routes\router;
     use douggonsouza\benchmarck\assets\assets;
+    use douggonsouza\logged\logged;
+    use douggonsouza\logged\models\user;
+    use douggonsouza\discovery\models\accessPage;
+    use douggonsouza\propertys\propertys;
+
+    $perfil = (new user())->perfil(logged::getId());
+    if(isset($perfil)){
+        $aPages = (new accessPage())->pages($perfil->access_id);
+    }
 ?>
         <!-- HEADER MOBILE -->
         <header class="header-mobile d-block d-lg-none">
@@ -8,17 +17,56 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="<?= router::assets("/images/icon/logo.png", assets::ABSOLUTE_URL) ?>" alt="CoolAdmin" />
+                            <img src="<?= router::assets("/images/icon/logo-douggs.png", assets::ABSOLUTE_URL) ?>" alt="CoolAdmin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
+                                <span class="hamburger-inner">
+
+                                    <div>
+                                        <ul class="nav flex-column flex-nowrap">
+                                            <?php
+                                                $count = 0;
+                                                $stepOne = '';
+                                                foreach($aPages as $page){
+                                                    if($page['stepOneShowName'] != $stepOne){
+                                                        echo('
+                                                        <li class="nav-item has-sub">
+                                                            <a class="nav-link collapsed text-truncate" href="#msubmenu' . $count . '" data-toggle="collapse" data-target="#msubmenu' . $count . '"><i class="' . $page['icon'] . '"></i> <span class="d-none d-sm-inline">' . router::label($page['stepOneShowName']) . '</span></a>
+                                                            <div class="collapse" id="msubmenu' . $count . '" aria-expanded="false">
+                                                                <ul class="flex-column pl-2">');
+                                                    }
+                                                
+                                                                    echo('
+                                                                    <li class="nav-item">
+                                                                        <a class="nav-link p-1 text-truncate" href="'. router::getUsages()->getHost(). $page['url'] . '">' . router::label($page['showName']) . '</a>
+                                                                    </li>
+                                                                    ');
+                                                    
+                                                    $stepOne = $page['stepOneShowName'];
+                                                    if($page['stepOneShowName'] != $stepOne){
+                                                        echo('
+                                                                <\ul>
+                                                            <\div>
+                                                        </li>
+                                                    ');
+                                                    }
+                                                    $count++;
+                                                }
+                                            ?>
+                                        </ul>
+                                    </div>
+
+                                </span>
                             </span>
                         </button>
+
+                        
                     </div>
                 </div>
             </div>
-            <nav class="navbar-mobile">
+
+            <!-- <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
                         <li class="has-sub">
@@ -119,5 +167,5 @@
                         </li>
                     </ul>
                 </div>
-            </nav>
+            </nav> -->
         </header>

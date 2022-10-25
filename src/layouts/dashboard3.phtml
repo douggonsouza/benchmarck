@@ -2,8 +2,8 @@
 <html lang="pt-br">
 <?php 
     use douggonsouza\routes\router;
-    use douggonsouza\alerts\alerts;
     use douggonsouza\benchmarck\assets\assets;
+    use douggonsouza\alerts\alerts;
 ?>
 <head>
     <!-- Required meta tags-->
@@ -17,27 +17,37 @@
     <title>Dashboard 3</title>
 
     <!-- BLOCO -->
+    <!-- dashboard3CssBlock -->
 
+        <?php
+            // router::identify('dashboard3CssBlock', $params);
+        ?>
+
+        <?php 
+            // use douggonsouza\routes\router;
+            // use douggonsouza\benchmarck\assets\assets;
+        ?>
         <!-- Fontfaces CSS-->
-        <link href="css/font-face.css" rel="stylesheet" media="all">
-        <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-        <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/css/font-face.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/font-awesome-4.7/css/font-awesome.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/font-awesome-5/css/fontawesome-all.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/mdi-font/css/material-design-iconic-font.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
 
         <!-- Bootstrap CSS-->
-        <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/bootstrap-4.1/bootstrap.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
 
         <!-- Vendor CSS-->
-        <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-        <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-        <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-        <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-        <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-        <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-        <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/animsition/animsition.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/wow/animate.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/css-hamburgers/hamburgers.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/slick/slick.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/select2/select2.min.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/vendor/perfect-scrollbar/perfect-scrollbar.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
 
         <!-- Main CSS-->
-        <link href="css/theme.css" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/css/theme.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
+        <link href="<?= router::assets('/css/main.css', assets::ABSOLUTE_URL) ?>" rel="stylesheet" media="all">
 
     <!-- BLOCO -->
 
@@ -45,47 +55,40 @@
 
 <body class="animsition">
     <div class="page-wrapper">
-
-        <!-- BLOCO -->
-        <!-- dashboardAlertsBlock -->
-
-        <div class="section__content section__content--p30">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card-body">
-                            <div class="sufee-alert alert with-close alert-primary alert-dismissible fade show">
-                                <span class="badge badge-pill badge-primary">Success</span>
-                                You successfully read this important alert.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <?php
-                                if(alerts::exist()){
-                                    alerts::get();
-                                }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- BLOCO -->
-
-        <!-- BLOCO -->
-        <!-- HEADER DESKTOP-->
-
+            
             <header class="header-desktop4">
                 <div class="container">
+
+                    <!-- BLOCO -->
+                    <!-- dashboard3HeaderDesktopBlock -->
+            
+                    <?php
+                        // router::identify('dashboard3HeaderDesktopBlock', $params);
+                    ?>
+
+                    <?php 
+                        // use douggonsouza\routes\router;
+                        // use douggonsouza\benchmarck\assets\assets;
+                    ?>
                     <div class="header4-wrap">
                         <div class="header__logo">
                             <a href="#">
-                                <img src="images/icon/logo-blue.png" alt="CoolAdmin" />
+                                <img src="<?= router::assets('/images/icon/logo-blue.png', assets::ABSOLUTE_URL) ?>" alt="CoolAdmin" />
                             </a>
                         </div>
                         <div class="header__tool">
+
+                            <!-- BLOCO -->
+                            <!-- dashboard3HeaderDesktopNotificationsBlock -->
+
+                            <?php
+                                // router::identify('dashboard3HeaderDesktopNotificationsBlock', $params);
+                            ?>
+
+                            <?php 
+                                // use douggonsouza\routes\router;
+                                // use douggonsouza\benchmarck\assets\assets;
+                            ?>
                             <div class="header-button-item has-noti js-item-menu">
                                 <i class="zmdi zmdi-notifications"></i>
                                 <div class="notifi-dropdown js-dropdown">
@@ -124,6 +127,20 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- BLOCO -->
+
+                            <!-- BLOCO -->
+                            <!-- dashboard3HeaderDesktopSettingsBlock -->
+                
+                            <?php
+                                // router::identify('dashboard3HeaderDesktopSettingsBlock', $params);
+                            ?>
+
+                            <?php 
+                                // use douggonsouza\routes\router;
+                                // use douggonsouza\benchmarck\assets\assets;
+                            ?>
                             <div class="header-button-item js-item-menu">
                                 <i class="zmdi zmdi-settings"></i>
                                 <div class="setting-dropdown js-dropdown">
@@ -161,10 +178,24 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- BLOCO -->
+
+                            <!-- BLOCO -->
+                            <!-- dashboard3HeaderDesktopAccountBlock -->
+
+                            <?php
+                                // router::identify('dashboard3HeaderDesktopAccountBlock', $params);
+                            ?>
+
+                            <?php 
+                                // use douggonsouza\routes\router;
+                                // use douggonsouza\benchmarck\assets\assets;
+                            ?>
                             <div class="account-wrap">
                                 <div class="account-item account-item--style2 clearfix js-item-menu">
                                     <div class="image">
-                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                        <img src="<?= router::assets('/images/icon/avatar-01.jpg', assets::ABSOLUTE_URL) ?>" alt="John Doe" />
                                     </div>
                                     <div class="content">
                                         <a class="js-acc-btn" href="#">john doe</a>
@@ -173,7 +204,7 @@
                                         <div class="info clearfix">
                                             <div class="image">
                                                 <a href="#">
-                                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                    <img src="<?= router::assets('/images/icon/avatar-01.jpg', assets::ABSOLUTE_URL) ?>" alt="John Doe" />
                                                 </a>
                                             </div>
                                             <div class="content">
@@ -204,87 +235,60 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- BLOCO -->
+
                         </div>
                     </div>
+
+                    <!-- BLOCO -->
+
                 </div>
             </header>
-
-        <!-- END HEADER DESKTOP -->
-        <!-- BLOCO -->
-
-        <!-- BLOCO -->
-        <!-- WELCOME-->
-
-            <section class="welcome2 p-t-40 p-b-55">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="au-breadcrumb3">
-                                <div class="au-breadcrumb-left">
-                                    <span class="au-breadcrumb-span">You are here:</span>
-                                    <ul class="list-unstyled list-inline au-breadcrumb__list">
-                                        <li class="list-inline-item active">
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li class="list-inline-item seprate">
-                                            <span>/</span>
-                                        </li>
-                                        <li class="list-inline-item">Dashboard</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="welcome2-inner m-t-60">
-                                <div class="welcome2-greeting">
-                                    <h1 class="title-6">Hi
-                                        <span>John</span>, Welcome back</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                </div>
-                                <form class="form-header form-header2" action="" method="post">
-                                    <input class="au-input au-input--w435" type="text" name="search" placeholder="Search for datas &amp; reports...">
-                                    <button class="au-btn--submit" type="submit">
-                                        <i class="zmdi zmdi-search"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        <!-- END WELCOME-->
-        <!-- BLOCO -->
-
-        <!-- BLOCO -->
-        <!-- PAGE CONTENT-->
-
             <div class="page-container3">
-                <section class="alert-wrap p-t-70 p-b-70">
-                    <div class="container">
-                        <!-- ALERT-->
-                        <div class="alert au-alert-success alert-dismissible fade show au-alert au-alert--70per" role="alert">
-                            <i class="zmdi zmdi-check-circle"></i>
-                            <span class="content">You successfully read this important alert message.</span>
-                            <button class="close" type="button" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">
-                                    <i class="zmdi zmdi-close-circle"></i>
-                                </span>
-                            </button>
-                        </div>
-                        <!-- END ALERT-->
-                    </div>
-                </section>
+
+                <!-- BLOCO -->
+                <!-- dashboard3PageContainerBlock -->
+
+                <?php
+                    // router::identify('dashboard3PageContainerBlock', $params);
+                ?>
+
+                <?php 
+                    // use douggonsouza\routes\router;
+                    // use douggonsouza\benchmarck\assets\assets;
+                ?>
+
                 <section>
                     <div class="container">
+
                         <div class="row">
+
                             <div class="col-xl-3">
-                                <!-- MENU SIDEBAR-->
-                                <aside class="menu-sidebar3 js-spe-sidebar">
+
+                                <!-- BLOCO -->
+                                <!-- dashboard3PageContainerMenuSidebarBlock -->
+
+                                <?php
+                                    // router::identify('dashboard3PageContainerMenuSidebarBlock', $params);
+                                ?>
+
+                                <?php
+                                    // use douggonsouza\routes\router;
+                                    // use douggonsouza\benchmarck\assets\assets;
+                                    use douggonsouza\logged\logged;
+                                    use douggonsouza\logged\models\user;
+                                    use douggonsouza\discovery\models\accessPage;
+                                    use douggonsouza\propertys\propertys;
+
+                                    $perfil = (new user())->perfil(logged::getId());
+                                    if(isset($perfil)){
+                                        $aPages = (new accessPage())->pages($perfil->access_id);
+                                    }
+                                ?>
+                                <aside class="menu-sidebar3 js-spe-sidebar" style="background-color: white;">
                                     <nav class="navbar-sidebar2 navbar-sidebar3">
-                                        <ul class="list-unstyled navbar__list">
+                                        <!-- <ul class="list-unstyled navbar__list">
                                             <li class="active has-sub">
                                                 <a class="js-arrow" href="#">
                                                     <i class="fas fa-tachometer-alt"></i>Dashboard 4
@@ -400,15 +404,89 @@
                                                     </li>
                                                 </ul>
                                             </li>
+                                        </ul> -->
+                                        <ul class="list-unstyled navbar__list">
+                                            <?php
+                                                $stepOne = '';
+                                                foreach($aPages as $page){
+                                                    if($page['stepOneShowName'] != $stepOne){
+                                                        echo('
+                                                        <li class="has-sub">
+                                                            <a  class="js-arrow" href="#"><i class="' . $page['icon'] . '"></i>' . router::label($page['stepOneShowName']) . '
+                                                            <span class="arrow">
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </span>
+                                                            </a>
+                                                            <ul class="list-unstyled navbar__sub-list js-sub-list">');
+                                                    }
+                                                    
+                                                                    echo('
+                                                                    <li>
+                                                                        <a href="'. router::getUsages()->getHost(). $page['url'] . '">' . router::label($page['showName']) . '</a>
+                                                                    </li>
+                                                                    ');
+                                                        
+                                                    $stepOne = $page['stepOneShowName'];
+                                                    if($page['stepOneShowName'] != $stepOne){
+                                                        echo('
+                                                            <\ul>
+                                                        </li>
+                                                    ');
+                                                    }
+                                                }
+                                            ?>
                                         </ul>
                                     </nav>
                                 </aside>
-                                <!-- END MENU SIDEBAR-->
+
+                                <!-- BLOCO -->
+
                             </div>
+
                             <div class="col-xl-9">
-                                <!-- PAGE CONTENT-->
                                 <div class="page-content">
+
                                     <div class="row">
+                                        <div class="col-lg-8">
+
+                                            <!-- BLOCO -->
+                                            <!-- dashboardAlertsBlock -->
+
+                                            <?php
+                                                // router::identify('dashboardAlertsBlock', $params);
+                                            ?>
+
+                                            <?php 
+                                                // use douggonsouza\routes\router;
+
+                                                $existAlerts = router::alerts()::exist();
+                                            ?>           
+                                            <div class="card-body">
+                                                <?php
+                                                    if($existAlerts){
+                                                        echo router::alerts()::get();
+                                                    }
+                                                ?>
+                                            </div>
+
+                                            <!-- BLOCO -->
+
+                                        </div>
+                                    </div>
+
+                                    <!-- BLOCO -->
+                                    <!-- dashboard3PageContainerPageContentBlock -->
+
+                                    <?php
+                                        // router::identify('dashboard3PageContainerPageContentBlock', $params);
+                                    ?>
+
+                                    <?php 
+                                        // use douggonsouza\routes\router;
+                                        // use douggonsouza\benchmarck\assets\assets;
+                                    ?>
+                                    <div class="row">
+
                                         <div class="col-lg-8">
                                             <!-- RECENT REPORT-->
                                             <div class="recent-report3 m-b-40">
@@ -468,6 +546,7 @@
                                             <!-- END CHART PERCENT-->
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-md-12">
                                             <!-- DATA TABLE-->
@@ -545,6 +624,7 @@
                                             <!-- END DATA TABLE                  -->
                                         </div>
                                     </div>
+
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <div class="au-card au-card--no-shadow au-card--no-pad m-b-40 au-card--border">
@@ -632,7 +712,7 @@
                                                             <div class="au-chat-info">
                                                                 <div class="avatar-wrap online">
                                                                     <div class="avatar avatar--small">
-                                                                        <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                                        <img src="<?= router::assets('/images/icon/avatar-02.jpg', assets::ABSOLUTE_URL) ?>" alt="John Smith">
                                                                     </div>
                                                                 </div>
                                                                 <span class="nick">
@@ -645,7 +725,7 @@
                                                                 <span class="mess-time">12 Min ago</span>
                                                                 <div class="recei-mess__inner">
                                                                     <div class="avatar avatar--tiny">
-                                                                        <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                                                        <img src="<?= router::assets('/images/icon/avatar-02.jpg', assets::ABSOLUTE_URL) ?>" alt="John Smith">
                                                                     </div>
                                                                     <div class="recei-mess-list">
                                                                         <div class="recei-mess">Lorem ipsum dolor sit amet elit</div>
@@ -674,7 +754,22 @@
                                                 </div>
                                             </div>
                                         </div>
+
                                     </div>
+
+                                    <!-- BLOCO -->
+
+                                    <!-- BLOCO -->
+                                    <!-- dashboard3PageContainerPageContentCopyrightBlock -->
+
+                                    <?php
+                                        // router::identify('dashboard3PageContainerPageContentCopyrightBlock', $params);
+                                    ?>
+
+                                    <?php 
+                                        // use douggonsouza\routes\router;
+                                        // use douggonsouza\benchmarck\assets\assets;
+                                    ?>
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="copyright">
@@ -682,44 +777,56 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- BLOCO -->
+
                                 </div>
-                                <!-- END PAGE CONTENT-->
+
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
 
-        <!-- END PAGE CONTENT  -->
-        <!-- BLOCO -->
+                <!-- BLOCO -->
+
+            </div>
 
     </div>
 
     <!-- BLOCO -->
+    <!-- dashboard3JsBlock -->
 
+        <?php
+            // router::identify('dashboard3JsBlock', $params);
+        ?>
+
+        <?php 
+            // use douggonsouza\routes\router;
+            // use douggonsouza\benchmarck\assets\assets;
+        ?>
         <!-- Jquery JS-->
-        <script src="vendor/jquery-3.2.1.min.js"></script>
+        <script src="<?= router::assets('/vendor/jquery-3.2.1.min.js', assets::ABSOLUTE_URL) ?>"></script>
         <!-- Bootstrap JS-->
-        <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-        <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+        <script src="<?= router::assets('/vendor/bootstrap-4.1/popper.min.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/bootstrap-4.1/bootstrap.min.js', assets::ABSOLUTE_URL) ?>"></script>
         <!-- Vendor JS       -->
-        <script src="vendor/slick/slick.min.js">
+        <script src="<?= router::assets('/vendor/slick/slick.min.js', assets::ABSOLUTE_URL) ?>">
         </script>
-        <script src="vendor/wow/wow.min.js"></script>
-        <script src="vendor/animsition/animsition.min.js"></script>
-        <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+        <script src="<?= router::assets('/vendor/wow/wow.min.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/animsition/animsition.min.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js', assets::ABSOLUTE_URL) ?>">
         </script>
-        <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendor/counter-up/jquery.counterup.min.js">
+        <script src="<?= router::assets('/vendor/counter-up/jquery.waypoints.min.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/counter-up/jquery.counterup.min.js', assets::ABSOLUTE_URL) ?>">
         </script>
-        <script src="vendor/circle-progress/circle-progress.min.js"></script>
-        <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-        <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-        <script src="vendor/select2/select2.min.js">
+        <script src="<?= router::assets('/vendor/circle-progress/circle-progress.min.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/perfect-scrollbar/perfect-scrollbar.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/chartjs/Chart.bundle.min.js', assets::ABSOLUTE_URL) ?>"></script>
+        <script src="<?= router::assets('/vendor/select2/select2.min.js', assets::ABSOLUTE_URL) ?>">
         </script>
 
         <!-- Main JS-->
-        <script src="js/main.js"></script>
+        <script src="<?= router::assets('/js/main.js', assets::ABSOLUTE_URL) ?>"></script>
 
     <!-- BLOCO -->
 

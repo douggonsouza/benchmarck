@@ -4,12 +4,22 @@
     margin-top: 9px;
     margin-left: 18px;
 }
+
+.nav-item.has-sub {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+
 .nav-link[data-toggle].collapsed:after {
     content: " ▾";
+    float: right;
 }
+
 .nav-link[data-toggle]:not(.collapsed):after {
     content: " ▴";
+    float: right;
 }
+
 .nav-link {
     color: #4b4a4a;
 }

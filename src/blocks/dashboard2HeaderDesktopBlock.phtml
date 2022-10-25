@@ -3,6 +3,13 @@
     use douggonsouza\benchmarck\assets\assets;
     use douggonsouza\logged\models\user;
     use douggonsouza\logged\logged;
+    use douggonsouza\discovery\models\accessPage;
+    use douggonsouza\propertys\propertys;
+
+    $perfil = (new user())->perfil(logged::getId());
+    if(isset($perfil)){
+        $aPages = (new accessPage())->pages($perfil->access_id);
+    }
 
     $user = new user();
     $user->search(array('user_id' => logged::getId()));
@@ -20,7 +27,43 @@
                                 <img src="<?= router::assets("/images/icon/logo-white.png", assets::ABSOLUTE_URL) ?>" alt="CoolAdmin" />
                             </a>
                         </div>
-                        <div class="header__navbar">
+
+                        <div class="header__navbar" id="sidebar">
+                            <ul class="list-unstyled">
+                                <?php
+                                    $count = 0;
+                                    $stepOne = '';
+                                    foreach($aPages as $page){
+                                        if($page['stepOneShowName'] != $stepOne){
+                                            echo('
+                                            <li class="has-sub">
+                                                <a href="#">
+                                                    <i class="' . $page['icon'] . '"></i>' . router::label($page['stepOneShowName']) . '
+                                                    <span class="bot-line"></span>
+                                                </a>
+                                                <ul class="header3-sub-list list-unstyled">');
+                                        }
+                                    
+                                                    echo('
+                                                    <li>
+                                                        <a href="'. router::getUsages()->getHost(). $page['url'] . '">' . router::label($page['showName']) . '</a>
+                                                    </li>
+                                                    ');
+                                        
+                                        $stepOne = $page['stepOneShowName'];
+                                        if($page['stepOneShowName'] != $stepOne){
+                                            echo('
+                                                <\ul>
+                                            </li>
+                                        ');
+                                        }
+                                        $count++;
+                                    }
+                                ?>
+                            </ul>
+                        </div>
+
+                        <!-- <div class="header__navbar">
                             <ul class="list-unstyled">
                                 <li class="has-sub">
                                     <a href="#">
@@ -109,11 +152,10 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                         
                         <div class="header__tool">
-
-                            <!-- <div class="header-button-item has-noti js-item-menu">
+                            <div class="header-button-item has-noti js-item-menu">
                                 <i class="zmdi zmdi-notifications"></i>
                                 <div class="notifi-dropdown notifi-dropdown--no-bor js-dropdown">
                                     <div class="notifi__title">
@@ -150,7 +192,7 @@
                                         <a href="#">All notifications</a>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
 
                             <div class="header-button-item has-noti js-item-menu">
                                 <ul class="nav nav-pills">

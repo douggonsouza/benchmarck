@@ -3,6 +3,13 @@
     use douggonsouza\benchmarck\assets\assets;
     use douggonsouza\logged\models\user;
     use douggonsouza\logged\logged;
+    use douggonsouza\discovery\models\accessPage;
+    use douggonsouza\propertys\propertys;
+
+    $perfil = (new user())->perfil(logged::getId());
+    if(isset($perfil)){
+        $aPages = (new accessPage())->pages($perfil->access_id);
+    }
 
     $user = new user();
     $user->search(array('user_id' => logged::getId()));
@@ -26,7 +33,8 @@
                         <a href="#">Sign out</a>
                     </div>
                     <nav class="navbar-sidebar2">
-                        <ul class="list-unstyled navbar__list">
+                        
+                        <!-- <ul class="list-unstyled navbar__list">                        
                             <li class="active has-sub">
                                 <a class="js-arrow" href="#">
                                     <i class="fas fa-tachometer-alt"></i>Dashboard
@@ -164,7 +172,40 @@
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
+                        </ul> -->
+                        <div class="menu-sidebar__content js-scrollbar1" id="sidebar">
+                            <ul class="list-unstyled navbar__list">
+                                <?php
+                                    $count = 0;
+                                    $stepOne = '';
+                                    foreach($aPages as $page){
+                                        if($page['stepOneShowName'] != $stepOne){
+                                            echo('
+                                            <li class="nav-item has-sub">
+                                                <a class="nav-link collapsed text-truncate" href="#submenu' . $count . '" data-toggle="collapse" data-target="#submenu' . $count . '"><i class="' . $page['icon'] . '"></i> <span class="d-none d-sm-inline">' . router::label($page['stepOneShowName']) . '</span></a>
+                                                <div class="collapse" id="submenu' . $count . '" aria-expanded="false">
+                                                    <ul class="flex-column pl-2">');
+                                        }
+                                            
+                                                        echo('
+                                                        <li class="nav-item">
+                                                            <a class="nav-link p-1 text-truncate" href="'. router::getUsages()->getHost(). $page['url'] . '">' . router::label($page['showName']) . '</a>
+                                                        </li>
+                                                        ');
+                                                
+                                        $stepOne = $page['stepOneShowName'];
+                                        if($page['stepOneShowName'] != $stepOne){
+                                            echo('
+                                                    <\ul>
+                                                <\div>
+                                            </li>
+                                        ');
+                                        }
+                                        $count++;
+                                    }
+                                ?>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </aside>

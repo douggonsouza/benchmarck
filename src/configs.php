@@ -53,6 +53,7 @@ namespace douggonsouza\benchmarck;
         'dashboard2PageContentDataTableBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentDataTableBlock.phtml', 'controller' => null),
         'dashboard2PageContentCopyrightBlock' => array('local' => __DIR__ . '/blocks/dashboard2PageContentCopyrightBlock.phtml', 'controller' => null),
         'dashboard2JsBlock' => array('local' => __DIR__ . '/blocks/dashboard2JsBlock.phtml', 'controller' => null),
+        'dashboard3' => array('local' => __DIR__ . '/layouts/dashboard3.phtml', 'controller' => null),
         'login' => array('local' => __DIR__ . '/layouts/login.phtml', 'controller' => null),
         'loginCssBlock' => array('local' => __DIR__ . '/blocks/loginCssBlock.phtml', 'controller' => null),
         'loginJsBlock' => array('local' => __DIR__ . '/blocks/loginJsBlock.phtml', 'controller' => null),

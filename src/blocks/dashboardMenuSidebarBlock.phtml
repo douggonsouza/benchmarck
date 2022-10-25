@@ -15,7 +15,7 @@
 		<aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="<?= router::assets("/images/icon/logo.png", assets::ABSOLUTE_URL) ?>" alt="Cool Admin" />
+                    <img src="<?= router::assets("/images/icon/logo-douggs.png", assets::ABSOLUTE_URL) ?>" alt="Cool Admin" />
                 </a>
             </div>
 
@@ -68,10 +68,10 @@
                         foreach($aPages as $page){
                             if($page['stepOneShowName'] != $stepOne){
                                 echo('
-                                <li class="nav-item">
+                                <li class="nav-item has-sub">
                                     <a class="nav-link collapsed text-truncate" href="#submenu' . $count . '" data-toggle="collapse" data-target="#submenu' . $count . '"><i class="' . $page['icon'] . '"></i> <span class="d-none d-sm-inline">' . router::label($page['stepOneShowName']) . '</span></a>
                                     <div class="collapse" id="submenu' . $count . '" aria-expanded="false">
-                                        <ul class="flex-column pl-2 nav">');
+                                        <ul class="flex-column pl-2">');
                             }
                         
                                             echo('

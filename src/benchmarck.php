@@ -88,8 +88,9 @@ final class benchmarck
      */
     public function identified(string $identify)
     {
-        if(!isset($identify) && !empty($identify)){
-            throw new \Exception("O parâmetro Identify e o Config são obrigatórios.");
+        if(!isset($identify) || empty($identify)){
+            // throw new \Exception("O parâmetro Identify e o Config são obrigatórios.");
+            return null;
         }
 
         $this->setBehavior(self::getIdentify());        
