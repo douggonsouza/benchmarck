@@ -2683,16 +2683,15 @@ section {
     position: relative;
 }
 
-.header__navbar ul li:last-child a {
+/* .header__navbar ul li:last-child a {
     border-right: 1px solid rgba(255, 255, 255, 0.102);
-}
+} */
 
 .header__navbar ul li a {
     display: block;
     font-size: 16px;
     color: #ccc;
     padding: 25px 30px;
-    border-left: 1px solid rgba(255, 255, 255, 0.102);
 }
 
 .header__navbar ul li a i {
