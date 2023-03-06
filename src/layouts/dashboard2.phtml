@@ -19,7 +19,7 @@
     <!-- dashboard2CssBlock -->
 
         <?php
-            router::identify('dashboard2CssBlock', $params);
+            router::block('dashboard2CssBlock', $params);
         ?>
 
     <!-- BLOCO -->
@@ -32,7 +32,7 @@
     <!-- dashboard2JsBlock -->
 
     <?php
-        router::identify('dashboard2JsBlock', $params);
+        router::block('dashboard2JsBlock', $params);
     ?>
 
     <!-- BLOCO -->
@@ -44,7 +44,7 @@
         <!-- HEADER DESKTOP-->
 
             <?php
-                router::identify('dashboard2HeaderDesktopBlock', $params);
+                router::block('dashboard2HeaderDesktopBlock', $params);
             ?>
 
         <!-- END HEADER DESKTOP-->
@@ -55,7 +55,7 @@
         <!-- HEADER MOBILE-->
 
             <?php
-                router::identify('dashboard2HeaderMobileBlock', $params);
+                router::block('dashboard2HeaderMobileBlock', $params);
             ?>
 
             <!-- BLOCO -->
@@ -63,7 +63,7 @@
             <!-- HEADER TOOL-->
 
             <?php
-                router::identify('dashboard2HeaderMobileToolBlock', $params);
+                router::block('dashboard2HeaderMobileToolBlock', $params);
             ?>
 
         <!-- END HEADER MOBILE -->
@@ -76,7 +76,7 @@
                 <!-- PAGE CONTENT-->
 
                 <?php
-                    router::identify('dashboard2PageContentBlock', $params);
+                    router::content($params);
                 ?>
 
             </div>

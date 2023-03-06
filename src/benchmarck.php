@@ -3,6 +3,8 @@
 namespace douggonsouza\benchmarck;
 
 use douggonsouza\benchmarck\behaviorInterface;
+use douggonsouza\benchmarck\benchmarckInterface;
+use douggonsouza\propertys\propertysInterface;
 use douggonsouza\benchmarck\assets\assets;
 use douggonsouza\benchmarck\blocks\blocks;
 use douggonsouza\benchmarck\layouts\layouts;
@@ -10,7 +12,7 @@ use douggonsouza\language\languageInterface;
 use douggonsouza\benchmarck\alerts;
 use douggonsouza\benchmarck\alertsInterface;
 
-final class benchmarck
+final class benchmarck implements benchmarckInterface
 {
     const NAME = 'DouggSDashboard';
 
@@ -33,6 +35,21 @@ final class benchmarck
     {
         $this->setLanguage($language);
         $this->setAlerts(new alerts(self::NAME .'_alerts'));
+        // include templates
+        include_once __DIR__. '/templates.php';
+    }
+
+    /**
+     * Executa o comportamento
+     *
+     * @param propertysInterface|null $propertys
+     * 
+     * @return object
+     * 
+     */
+    public function behavior(propertysInterface $propertys = null)
+    {
+        return $this->getBehavior();
     }
 
     /**

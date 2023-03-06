@@ -91,7 +91,7 @@ class identify implements behaviorInterface
      * 
      * @param string $identify
      * 
-     * @return string|null
+     * @return string|string
      */
     public function local(string $identify)
     {
@@ -99,7 +99,7 @@ class identify implements behaviorInterface
         if(isset($config) && !empty($config)){
             return $config['local'];
         }
-        return null;
+        return $identify;
     }
 
     /** 
