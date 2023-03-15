@@ -3,7 +3,7 @@
         'name' => 'douggonsouza/benchmarck',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '79d8ae5d2bdda30e7f3fbeb3ae0a33bc02a3dc8a',
+        'reference' => 'cf65d41f50dc071f816085a1e5d3f7ce8f6cee76',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'douggonsouza/benchmarck' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '79d8ae5d2bdda30e7f3fbeb3ae0a33bc02a3dc8a',
+            'reference' => 'cf65d41f50dc071f816085a1e5d3f7ce8f6cee76',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
